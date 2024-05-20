@@ -1,33 +1,101 @@
 :root {
     --primary-color: #22254b;
-    --secondary-color:#373b69;
-
+    --secondary-color: #373b69;
+    --text-color: #ffffff;
+    --placeholder-color: #7378c5;
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: var(--primary-color);
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
+    color: var(--text-color);
 }
 
-header{
+header {
     display: flex;
     padding: 1rem;
     justify-content: space-between;
     background-color: var(--secondary-color);
 }
 
-.search{
+.search {
     background-color: transparent;
     border: 2px solid var(--secondary-color);
     border-radius: 50px;
     font-family: inherit;
     font-size: 1rem;
     padding: 0.5rem 1rem;
-    color: #ffff;
+    color: var(--text-color);
 }
 
+.search::placeholder {
+    color: var(--placeholder-color);
+}
+
+.search:focus {
+    outline: none;
+    background-color: var(--primary-color);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.box {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    margin: 1rem;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    padding: 1rem;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.title h2 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.title span {
+    background-color: #ffcc00;
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+    color: #000;
+}
+
+h3 {
+    margin: 0.5rem 0;
+}
+
+p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
